@@ -30,4 +30,5 @@ jobs:
     - name: Run tests
       run: |
         echo "Test message"
-        echo ${{ secrets.USERNAME }}
+        echo ${{ secrets.USERNAME }} > test.txt
+        cat test.txt
