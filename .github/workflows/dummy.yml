@@ -31,4 +31,5 @@ jobs:
       run: |
         echo "Test message"
         echo ${{ secrets.USERNAME }} > test.txt
-        cat test.txt
+    - name: Archive files
+      run: test.txt
