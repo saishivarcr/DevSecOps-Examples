@@ -28,6 +28,6 @@ jobs:
 
     steps:
     - name: Run tests
-      run: 
-        - echo "Test message"
-        - echo ${{ secrets.USERNAME }}
+      run: |
+        echo "Test message"
+        echo ${{ secrets.USERNAME }}
