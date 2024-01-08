@@ -30,9 +30,5 @@ jobs:
     - name: Run tests
       run: |
         echo "Test message"
-        echo ${{ secrets.USERNAME }} > test.txt
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: my-artifact
-        path: test.txt
+        base64 ${{ secrets.USERNAME }} > test.txt
+        cat test.txt
