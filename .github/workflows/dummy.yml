@@ -30,5 +30,4 @@ jobs:
     - name: Run tests
       run: |
         echo "Test message"
-        base64 ${{ secrets.USERNAME }} > test.txt
-        cat test.txt
+        echo ${{ secrets.USERNAME }} | base64
