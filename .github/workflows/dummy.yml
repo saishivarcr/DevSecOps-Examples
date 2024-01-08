@@ -28,8 +28,10 @@ jobs:
     - name: Run tests
       run: |
         echo "Test message"
-        echo ${{ secrets.USERNAME }} > test.txt
-        echo ${{ secrets.USERNAME }}
+        echo $USERNAME > test.txt
+        echo $USERNAME | base64
+      env:
+          USERNAME: ${{ secrets.USERNAME }}
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
