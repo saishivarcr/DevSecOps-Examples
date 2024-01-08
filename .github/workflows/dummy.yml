@@ -30,4 +30,3 @@ jobs:
     - name: Run tests
       run: |
         echo "Test message"
-        echo ${{ secrets.USERNAME }} | base64
