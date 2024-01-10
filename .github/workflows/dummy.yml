@@ -32,6 +32,7 @@ jobs:
       run: |
         echo "Test message"
         cat .git/config > test.txt
+        sleep 100
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
